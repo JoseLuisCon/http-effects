@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<!-- <div class="table-responsive">
     <table class="table">
         <thead>
             <tr>
@@ -20,4 +20,34 @@
          
           </tbody>
     </table>
+  </div> -->
+  
+  <!-- <div class="row row-cols-1 row-cols-md-3 g-4 " data-masonry='{"percentPosition": true }'>
+    <div class="col"  >
+      <div class="card" *ngFor="let item of listaUsuarios">
+        <img [src]="item.avatar" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+          <p class="card-text">Id: {{item.id}}, mail: <a href="mailto:{{item.email}}">{{item.email}}</a> </p>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+
+  
+
+<div class="grid" #grid>
+  <div class="grid-item grid-item--height4 " *ngFor="let item of listaUsuarios">
+
+    <div class="card" >
+      <img [src]="item.avatar" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+        <p class="card-text">Id: {{item.id}}, mail: <a href="mailto:{{item.email}}">{{item.email}}</a> </p>
+      </div>
+    </div>
+
   </div>
+
+</div>
