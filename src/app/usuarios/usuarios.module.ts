@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ListaComponent } from './lista/lista.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 
+import { NgxMasonryModule } from 'ngx-masonry';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 
 @NgModule({
@@ -11,7 +14,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
     UsuarioComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxMasonryModule,
+    BrowserAnimationsModule
   ],
   exports: [
     ListaComponent,

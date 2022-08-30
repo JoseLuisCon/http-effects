@@ -19,7 +19,9 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@fortawesome/fontawesome-free": "^6.1.2",
+    "jquery": "^3.6.1",
     "masonry-layout": "^4.2.2",
+    "ngx-masonry": "^13.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

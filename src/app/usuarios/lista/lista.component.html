@@ -21,8 +21,8 @@
           </tbody>
     </table>
   </div> -->
-  
-  <!-- <div class="row row-cols-1 row-cols-md-3 g-4 " data-masonry='{"percentPosition": true }'>
+
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4 " data-masonry='{"percentPosition": true }'>
     <div class="col"  >
       <div class="card" *ngFor="let item of listaUsuarios">
         <img [src]="item.avatar" class="card-img-top" alt="...">
@@ -35,19 +35,45 @@
 
   </div> -->
 
+
+
+<!-- <div class="grid" >
+  <div class="grid-sizer">
+    <div class="grid-item">
+
+      <div class="grid-item grid-item--height4 " *ngFor="let item of listaUsuarios">
+        <div class="card" >
+          <img [src]="item.avatar" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+            <p class="card-text">Id: {{item.id}}, mail: <a href="mailto:{{item.email}}">{{item.email}}</a> </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
   
 
-<div class="grid" #grid>
-  <div class="grid-item grid-item--height4 " *ngFor="let item of listaUsuarios">
+</div> -->
 
-    <div class="card" >
-      <img [src]="item.avatar" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
-        <p class="card-text">Id: {{item.id}}, mail: <a href="mailto:{{item.email}}">{{item.email}}</a> </p>
+<ngx-masonry 
+      [options]="maronryOptions" 
+      style="width: 100%; margin: 0;" 
+      [ordered]="true" 
+      [updateLayout]="true"
+      >
+  <div ngxMasonryItem  *ngFor="let item of listaUsuarios;index as idx" >
+      <div class="card" >
+        <img [src]="item.avatar" class="card-img-top" alt="..."
+        masonryLazy loading="lazy" width="200px" height="250px"  
+        >
+        <div class="card-body">
+          <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+          <p class="card-text">Id: {{item.id}}, mail: <a href="mailto:{{item.email}}">{{item.email}}</a> </p>
+        </div>
       </div>
     </div>
-
-  </div>
-
-</div>
+  
+</ngx-masonry>
