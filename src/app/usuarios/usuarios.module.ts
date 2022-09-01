@@ -5,6 +5,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 
 import { NgxMasonryModule } from 'ngx-masonry';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
   imports: [
     CommonModule,
     NgxMasonryModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   exports: [
     ListaComponent,

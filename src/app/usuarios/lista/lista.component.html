@@ -58,11 +58,45 @@
 
 </div> -->
 
+<div 
+  class="alert alert-dark text-center" 
+  role="alert"
+  *ngIf="loading"
+  >
+  <h4 class="alert-heading">Cargando</h4>
+  <p>
+    <fa-icon [icon]="camera" [spin]="true"></fa-icon>
+  </p>
+  
+  
+  <p class="mb-0"></p>
+</div>
+
+<div 
+  class="alert alert-danger text-center" 
+  role="alert"
+  *ngIf="error"
+  >
+  <h4 class="alert-heading">Error</h4>
+  <pre>
+
+    {{error | json}}
+
+  </pre>
+  
+  
+  <p class="mb-0"></p>
+</div>
+
+
+
+
 <ngx-masonry 
       [options]="maronryOptions" 
       style="width: 100%; margin: 0;" 
       [ordered]="true" 
       [updateLayout]="true"
+      *ngIf="!loading"
       >
   <div ngxMasonryItem  *ngFor="let item of listaUsuarios;index as idx" >
       <div class="card" >
